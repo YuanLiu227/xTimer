@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+spring:
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#        username: nacos
+#        password: nacos
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/xtimer?serverTimezone=GMT%2B8&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: 1234
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: ""
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  #开启驼峰命名
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
